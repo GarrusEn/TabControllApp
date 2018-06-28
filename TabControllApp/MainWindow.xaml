@@ -15,8 +15,6 @@
                  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
-                    <Setter Property="MinWidth" Value="50"/>
-                    <Setter Property="MaxWidth" Value="500"/>
                     <Setter Property="AllowDrop" Value="True"/>
                     <EventSetter Event="PreviewMouseMove" Handler="TabItem_Drag"/>
                     <EventSetter Event="Drop" Handler="TabItem_Drop"/>
@@ -47,31 +45,8 @@
                         <Button/>
                     </DockPanel>
                 </TabItem.Header>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <DockPanel>
-                        <TextBlock Margin="3">Tab 3</TextBlock>
-                        <Button />
-                    </DockPanel>
-                </TabItem.Header>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <DockPanel>
-                        <TextBlock Margin="3">Tab 4</TextBlock>
-                        <Button/>
-                    </DockPanel>
-                </TabItem.Header>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <DockPanel>
-                        <TextBlock Margin="3">Tab 5</TextBlock>
-                        <Button/>
-                    </DockPanel>
-                </TabItem.Header>
-            </TabItem>
+            </TabItem>            
+            <TabItem Name="LastTab" MaxWidth="30" AllowDrop="False" PreviewMouseDown="LastTab_PreviewMouseDown" ToolTip="new Tab"></TabItem>
         </TabControl>
     </StackPanel>
 </Window>
